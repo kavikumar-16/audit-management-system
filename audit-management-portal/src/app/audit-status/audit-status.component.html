@@ -1,0 +1,44 @@
+<div class="container justify-content-center">
+    <h3 class="m-4 display-4 text-center " style="color: black">Audit
+        Status</h3>
+    <hr>
+    <div *ngIf="isLoading" style="text-align: center;">
+        <app-loading-spinner></app-loading-spinner> 
+    </div>
+    <div class ="status" style=" width: 75%; margin-left: auto;
+    margin-right: auto;" *ngIf="!isLoading">
+
+        <table cellpadding="5">
+            <tr>
+                <th>Project Name</th>
+                <th>Project Manager</th>
+                <th>Project Owner</th>
+                <th>Audit Type</th>
+                <th>Audit Date</th>
+                <th>Execution status</th>
+                <th>Remedial Action</th>
+                <th></th>
+
+            </tr>
+            <tr>
+                <td>{{auditRequest.projectName}}</td>
+                <td>{{auditRequest.projectManagerName}}</td>
+                <td>{{auditRequest.applicationOwnerName}}</td>
+                <td>{{auditRequest.auditDetail.auditType}}</td>
+                <td>{{auditRequest.auditDetail.auditDate}}</td>
+                <td>{{projectExecutionStatus}}</td>
+                <td>{{remedialActionDuration}}</td>
+                <td><input type="button" class="btn btn-info" routerLink="/checklist" value="Edit response"></td>
+
+            </tr>
+            <!-- <td><input type="submit" class="btn btn-info" value="edit" /></td> -->
+
+        </table>
+
+    </div>
+
+
+
+
+</div>
+

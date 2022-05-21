@@ -1,0 +1,69 @@
+
+    <body>
+        
+        <div class="col-xs-6 col-md-4 col-md-offset-4">
+           
+            <h3 class="m-4 display-4 text-center " style="color: black" >Project Details</h3>
+            <hr>
+            <div class="form-group ">
+                
+                <form #homeForm="ngForm" class="px-5 py-4 border rounded "   (ngSubmit)="onSubmit(homeForm)" *ngIf="!isLoading">
+    
+                    <div class="form-group">
+                        <label name="projectName">Project Name</label>
+                        <span class="required">*</span>
+                        <input name="projectName" required
+                            class="form-control" id="projectName" ngModel
+                         />
+    
+    
+                        <div class="form-group">
+                            <label name="managerName">Project Manager Name</label>
+                            <span class="required">*</span>
+                            <input name="managerName" required
+                                class="form-control" id="ProjectManagerName" ngModel
+                             />
+                            
+                        </div>
+                        <div class="form-group">
+                            <label name="ownerName">Application Owner</label>
+                            <span class="required">*</span>
+                            <input name="ownerName" required
+                                class="form-control" id="ApplicationOwnerName" ngModel
+                             />
+                        </div>
+                        <div class="form-group">
+                            <label for="AuditType">Audit Type</label> <span class="required">*</span>
+
+                                <div class="input-group">
+                                    <span class="input-group-prepend">
+    
+                                        <input name="auditType" required type="radio"
+                                            id="internal" value="Internal"  ngModel
+                                            aria-label="Radio button for following text input" />
+    
+                                        &nbsp; <label for="Internal"> Internal</label>
+                                    </span>
+                                    &nbsp;
+                                    <span class="input-group-prepend">
+                                        
+                                        <input  name="auditType" type="radio" id="sox" value="SOX"
+                                            ngModel
+                                            aria-label="Radio button for following text input" />
+    
+                                        &nbsp; <label for="SOX"> SOX</label>
+                                    </span>
+                                </div>
+                                &nbsp;
+                                <div> 
+                                <input type="submit" class="btn btn-primary mt-3" [disabled]="!homeForm.valid"
+                                   value="Submit">                         
+                                </div>                                
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+  
+    </body>

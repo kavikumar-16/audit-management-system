@@ -1,0 +1,75 @@
+
+
+<body>
+<div class="row">
+    
+  <!-- <div class="image" >
+    <img class="img-fluid"  src="https://media.istockphoto.com/photos/administrator-business-man-financial-inspector-and-secretary-making-picture-id1135581630?k=20&m=1135581630&s=612x612&w=0&h=ccb5-xABwm54yzOJRU4G2r7DViG5aclcdYtoFJu1Pno=" alt=""/>
+  </div> -->
+
+ 
+    <div class="col-xs-6 col-md-4 col-md-offset-4">
+      
+      
+      <div *ngIf="isLoading" style="text-align: center;">
+        <app-loading-spinner></app-loading-spinner>
+      </div>
+      
+      <div class="login-form">
+        <div class="alert alert-danger" *ngIf="error">
+          <p>{{ error }}</p>
+        </div>
+      <form class = "form-group "#authForm="ngForm" (ngSubmit)="onSubmit(authForm)" *ngIf="!isLoading">
+        <h3 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;"><strong>Welcome to AuditNow!</strong></h3>
+        <br/>
+        <h6  style="letter-spacing: 0.5px; color:rgb(59, 59, 250)">Please enter your login credentials</h6>
+        
+        <div class="form-group">
+          <!-- <label for="username">User name</label> -->
+          <input
+            type="text"
+            id="username"
+            class="form-control"
+            ngModel
+            name="username"
+            required
+            minlength="6"
+            placeholder="User name"
+          />
+          
+        </div>
+       
+        <div class="form-group">
+          <!-- <label for="password">Password</label> -->
+          <input
+            type="password"
+            id="password"
+            class="form-control"
+            ngModel
+            name="password"
+            placeholder="Password"
+            required
+            minlength="4"
+          />
+        </div>
+
+       
+       
+        <div class="login-btn">
+          <button
+            class="btn btn-primary"
+            type="submit"
+            [disabled]="!authForm.valid"
+          >
+            Log in
+          </button>
+        </div>
+        
+       
+      </form>
+    </div>
+    </div>
+</div>
+
+</body>
+

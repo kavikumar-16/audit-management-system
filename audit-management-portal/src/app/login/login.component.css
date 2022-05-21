@@ -1,0 +1,35 @@
+
+
+body{
+    height:40em; background-size:cover; width:auto;
+    /* background-image:url('https://media.istockphoto.com/photos/administrator-business-man-financial-inspector-and-secretary-making-picture-id1135581630?k=20&m=1135581630&s=612x612&w=0&h=ccb5-xABwm54yzOJRU4G2r7DViG5aclcdYtoFJu1Pno='); */
+    background-image:url('https://cdn.corporatefinanceinstitute.com/assets/legal-importance-audit-1024x559.jpeg');
+    /* background-image:url('http://www.careersinaudit.com/getasset/457e0344-1ee9-438b-895b-41c5fc822227/'); */
+    background-position:50% 50%;
+ 
+}
+  
+.form-group{
+    background-color:white ;
+  justify-content: center;
+    border-radius: 10px;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+h3{
+    color: steelblue;
+    width: 100%;
+    text-align: center;
+}
+  
+.login-btn{
+
+    padding-bottom: 20px;
+    width: 50%;
+    margin: auto;
+}
+.login-form{
+    margin-top: 100px;
+}
